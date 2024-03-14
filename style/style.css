@@ -12,52 +12,143 @@ li, a{
     font-size: 16px;
     text-decoration: none;
 }
-
-body{
-    max-width: 1300px;
+html{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 98%;
+    grid-template-rows: 100%;
+    max-width: 1800px;
+    margin-left: auto; 
+    margin-right: auto;
 }
 
+/*top header*/
 header {
-    height: 40px;
-    padding-right: 5%;
-    padding-left: 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: rgb(255, 255, 255);
     position: fixed;
-    right: 0; 
-    left: 0; 
+    left:0;
+    right:0;
+    top:0;
+    padding-top: 10px;
+    height: 14%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+nav{
+    display: grid;
+    grid-template-columns: 15% 35% 10% 10% 10% 10% 10%;
+    grid-template-rows: 100%;
 }
 
 .logo {
-    height: 40px;
-    cursor: pointer;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1; 
+    background-image: url("./logo/logoProVictoSQ.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    margin-left: 10px;
 }
-
-.nav_links{
-    list-style: none;
+.produits {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1; 
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+    text-align: center;
 }
-
-.nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
+.nosServices {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1; 
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 20%;
 }
-
-.nav_links li a:hover {
-    transition: all 0.3s ease 0s;
+.aPropos {
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 1; 
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 20%;
 }
-.nav_links li a {
-    color:black;
+.nousContacter {
+    grid-column-start: 6;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 1; 
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 20%;
 }
-
+.cta {
+    grid-column-start: 7;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 1; 
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10% 80% 10%;
+}
+.cta .profil{
+    background-image: url("./icon/person-circle.svg");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2; 
+    height: 100%;
+    width: 100%; 
+}
+/*Page*/
 main{
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 5% 90% 5%;
-    grid-template-rows: 400px 400px 400px 400px 400px 200px;
+    grid-template-columns: 3% 94% 3%;
+    grid-template-rows: 400px 150px 600px 150px 600px 150px 800px 150px 500px 150px 200px;
+
 }
+
+main h2{
+    color: rgb(51, 51, 51);
+    font-size: 36pt;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+}
+
+main h4{
+    color: rgb(51, 51, 51);
+    font-size: 20pt;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+
+}
+main h3{
+    color: rgb(247, 247, 247);
+    height: 100%;  
+}
+main a:hover{
+    background-color: rgb(27, 54, 95);
+}
+/*Acceuil*/
 .acceuil{
     grid-column-start: 2;
     grid-column-end: 2;
@@ -65,17 +156,21 @@ main{
     grid-row-end: 1;
     overflow: hidden;
 }
+/*Installation*/
 .installation{
-    height: 100%;
     grid-column-start: 2;
     grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    height: 100%;
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: 55% 5% 40%;
     grid-template-rows: 40% 40% 20%;
+    background-color: rgba(201, 201, 201, 0.2);
+    padding: 25px;
+    border-radius: 10px;
 }
 .installation .imgInstallation{
     grid-column-start: 1;
@@ -87,12 +182,9 @@ main{
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
+    border-radius: 10px;
 }
 .installation h2{
-    color: rgb(51, 51, 51);
-    font-size: 36pt;
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
     grid-column-start: 3;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -100,13 +192,8 @@ main{
     height: 100%;
     width: 100%;
     text-align: right;
-    padding-right: 5%;
 }
 .installation h4{
-    color: rgb(51, 51, 51);
-    font-size: 20pt;
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
     grid-column-start: 3;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -114,13 +201,11 @@ main{
     height: 100%;
     width: 100%;
     text-align: right;
-    padding-right: 5%;
 }
 .installation a{
     background-color: rgb(67, 97, 32);
     height: 100%;
     text-align: center;
-    margin-right: 5%;
     border-radius: 10px;
     grid-column-start: 3;
     grid-column-end: 3;
@@ -130,6 +215,7 @@ main{
     grid-template-columns: 5% 15% 5% 70% 5%;
     grid-template-rows: 20% 60% 20%;
 }
+
 .installation a .flecheGauche{
     background-image: url("./icon/fleche_gauche.svg");
     background-size:contain;
@@ -142,36 +228,247 @@ main{
     grid-row-end: 2;
 }
 .installation a h3{
-    color: rgb(247, 247, 247);
-    height: 100%;
-    text-align: center;
     grid-column-start: 4;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 2;
     padding-top: 5%;
 }
+/*Tondeuse*/
 .tondeuse{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 3;
-}
-.presentation{
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 4;
-}
-.offre{
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 5;
     grid-row-end: 5;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 40% 5% 50%;
+    grid-template-rows: 40% 40% 20%;
+    background-color: rgba(201, 201, 201, 0.2);
+    padding: 25px;
+    border-radius: 10px;
+}
+.tondeuse .imgTondeuse{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-image: url("./photo/tondeuse.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.tondeuse h2{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+}
+.tondeuse h4{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    padding-right: 5%;
+}
+.tondeuse a{
+    background-color: rgb(67, 97, 32);
+    height: 100%;
+    text-align: center;
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 5% 70% 5% 15% 5%;
+    grid-template-rows: 20% 60% 20%;
+}
+.tondeuse a .flecheDroite{
+    background-image: url("./icon/fleche_droite.svg");
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.tondeuse a h3{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    padding-top: 5%;
+}
+
+/*presentation*/
+.presentation{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 7;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 55% 5% 40%;
+    grid-template-rows: 43% 43% 14%;
+    background-color: rgba(201, 201, 201, 0.2);
+    border-radius: 10px;
+    padding: 25px;
+}
+.presentation .imgPresentation{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-image: url("./photo/presentation.png");
+    background-size:70%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.presentation h2{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    height: 100%;
+    width: 100%;
+    text-align: right;
+}
+.presentation h4{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    height: 100%;
+    width: 100%;
+    text-align: right;
+}
+.presentation a{
+    background-color: rgb(67, 97, 32);
+    height: 100%;
+    text-align: center;
+    border-radius: 10px;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 5% 15% 5% 70% 5%;
+    grid-template-rows: 20% 60% 20%;
+}
+.presentation a .flecheGauche{
+    background-image: url("./icon/fleche_gauche.svg");
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.presentation a h3{
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    padding-top: 5%;
+}
+/*offre*/
+.offre{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 9;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 40% 5% 50%;
+    grid-template-rows: 40% 40% 20%;
+    background-color: rgba(201, 201, 201, 0.2);
+    padding: 25px;
+    border-radius: 10px;
+}
+.offre .imgOffre{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-image: url("./photo/offre.png");
+    background-size:50%;
+    background-repeat: no-repeat;
+    margin:5% 5% 5% 45%;
+    height: 100%;
+    width: 100%;
+}
+.offre h2{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+}
+.offre h4{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    padding-right: 5%;
+}
+.offre a{
+    background-color: rgb(67, 97, 32);
+    height: 100%;
+    text-align: center;
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 5% 70% 5% 15% 5%;
+    grid-template-rows: 20% 60% 20%;
+}
+.offre a .flecheDroite{
+    background-image: url("./icon/fleche_droite.svg");
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.offre a h3{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    padding-top: 5%;
 }
 .contact{
     grid-column-start: 2;
     grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 6;
+    grid-row-start: 11;
+    grid-row-end: 11;
 }
