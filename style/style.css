@@ -30,15 +30,16 @@ header {
     left:0;
     right:0;
     top:0;
-    padding-top: 10px;
-    height: 14%;
+    height: 10%;
+    min-height: 80px;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100%;
+    border-bottom: 3px solid rgb(51, 51, 51, 0.2);
 }
 nav{
     display: grid;
-    grid-template-columns: 15% 35% 10% 10% 10% 10% 10%;
+    grid-template-columns: 15% auto auto;
     grid-template-rows: 100%;
 }
 
@@ -48,74 +49,75 @@ nav{
     grid-row-start: 1;
     grid-row-end: 1; 
     background-image: url("./logo/logoProVictoSQ.png");
-    background-size: 80%;
+    background-size: 150px;
     background-repeat: no-repeat;
     align-self: center;
     height: 100%;
     width: 100%;
-    margin-left: 10px;
+    background-position-x: center;
+    background-position-y: center;
 }
-.produits {
+.logo:hover {
+    background-color: rgb(67, 97, 32,0.4);
+}
+.navig{
+
     grid-column-start: 3;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 1; 
+    display: flex; 
+}
+.navig a{
+    display: flex;
+}
+.navig a h3{
+    margin: auto;
+    color: rgb(0, 0, 0);
+}
+.navig a:hover{
+    background-color: rgb(67, 97, 32,0.4);
+    h3{
+        color: rgb(255, 255, 255);
+    }   
+}
+
+.produits {
     height: 100%;
     width: 100%;
-    padding-top: 20%;
-    text-align: center;
+}
+
+.produits:hover {
+    color: rgb(255, 255, 255);
+    
 }
 .nosServices {
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 1; 
     height: 100%;
     width: 100%;
     text-align: center;
-    padding-top: 20%;
+    
 }
-.aPropos {
-    grid-column-start: 5;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 1; 
+.aPropos { 
     height: 100%;
     width: 100%;
     text-align: center;
-    padding-top: 20%;
 }
 .nousContacter {
-    grid-column-start: 6;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 1; 
     height: 100%;
     width: 100%;
     text-align: center;
-    padding-top: 20%;
 }
 .cta {
-    grid-column-start: 7;
-    grid-column-end: 7;
-    grid-row-start: 1;
-    grid-row-end: 1; 
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 10% 80% 10%;
-}
-.cta .profil{
     background-image: url("./icon/person-circle.svg");
-    background-size: 30%;
+    background-size: 20%;
     background-repeat: no-repeat;
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2; 
+    width: 100%;
     height: 100%;
-    width: 100%; 
+    background-position-x: center ;
+    background-position-y: center ;
+}
+.cta:hover{
+    background-image: url("./icon/person-circle_white.svg");
 }
 /*Page*/
 main{
@@ -183,6 +185,7 @@ main a:hover{
     height: 100%;
     width: 100%;
     border-radius: 10px;
+    background-position-x: center;
 }
 .installation h2{
     grid-column-start: 3;
@@ -260,6 +263,7 @@ main a:hover{
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
+    background-position-x: center;
 }
 .tondeuse h2{
     grid-column-start: 1;
@@ -338,6 +342,7 @@ main a:hover{
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
+    background-position-x: center;
 }
 .presentation h2{
     grid-column-start: 3;
