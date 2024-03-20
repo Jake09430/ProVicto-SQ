@@ -26,11 +26,50 @@
           </nav>
     </header>
 
-    <main>
-      <div class="acceuil">
-        <i class="imageAcceuil" alt="Image Automower Husqvarna"></i>
+    <acceuil>
+      <div class="slider">
+        <div class="slides" alt="Image Automower Husqvarna">
+          <!--Radio button start-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--Radio button end-->
+          <!--Slide image start-->
+          <div class="slide first">
+            <img src="./style/ImageAcceuilSlider/ROBOT_INTRO.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="./style/ImageAcceuilSlider/ROBOT_INTRO_2.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="./style/ImageAcceuilSlider/ROBOT_INTRO_3.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="./style/ImageAcceuilSlider/ROBOT_INTRO_4.jpg" alt="">
+          </div>
+          <!--Slide image end-->
+          <!--Automatic navigation start-->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+          <!--Automatic navigation end-->
+        </div>
+        <!--Manual navigation start-->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!--Manual navigation end-->
         <h1>AUTOMATISER</h1><p>VOTRE ENTRETIEN DE PELOUSE</p>
       </div>
+    </acceuil>
+    <main>
       <div class="installation">
         <i class="imgInstallation"></i>
         <h2>SERVICE D'INSTALLATION</h2>

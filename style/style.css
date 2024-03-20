@@ -126,8 +126,8 @@ main{
     justify-content: center;
     align-items: center;
     grid-template-columns: 3% 94% 3%;
-    grid-template-rows: 600px 150px 600px 150px 600px 150px 800px 150px 500px 150px 200px;
-    padding-top: 150px;
+    grid-template-rows: 10px 150px 600px 150px 600px 150px 800px 150px 500px 150px 200px;
+    padding-top: 8%;
 }
 
 
@@ -153,7 +153,7 @@ main a:hover{
     background-color: rgb(27, 54, 95);
 }
 /*Acceuil*/
-.acceuil{
+/*.acceuil{
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -169,13 +169,8 @@ main a:hover{
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 3;
-    background-image: url("./photo/ROBOT_INTRO.jpg");
-    background-size: 90%;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
 }
 .acceuil h1{
     grid-column-start: 1;
@@ -193,13 +188,103 @@ main a:hover{
     grid-column-end: 1;
     grid-row-start: 3;
     grid-row-end: 3;
-    z-index: 1;
     margin-left: 7%; 
     color: rgb(67, 97, 32);
     font-size: 36pt;
     font-family: "Roboto", sans-serif;
     font-weight: 900;
+}*/
+.slider{
+    width: 800px;
+    height: 500px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    height: 100%;
+    width: 100%;
+    margin-left: 400px;
 }
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+   width: 800px;
+   height: 500px; 
+}
+/*css for manual slide navigation*/
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+.manual-btn{
+   border: 2px solid rgb(247, 247, 247);
+   padding: 5px;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: 1s; 
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+ }
+ .manual-btn:hover{
+    background: rgb(27, 54, 95);
+ }
+
+ #radio1:checked ~ .first{
+    margin-left: 0;
+ }
+ #radio2:checked ~ .first{
+    margin-left: -20%;
+ }
+ #radio3:checked ~ .first{
+    margin-left: -40%;
+ }
+ #radio4:checked ~ .first{
+    margin-left: -60%;
+ }
+ /*css for automatic navigation*/
+ .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+ }
+ .navigation-auto div{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+ }
+ .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+ }
+ #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: rgb(27, 54, 95);
+ }
+ #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: rgb(27, 54, 95);
+ }
+ #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: rgb(27, 54, 95);
+ }
+ #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: rgb(27, 54, 95);
+ }
 /*Installation*/
 .installation{
     grid-column-start: 2;
