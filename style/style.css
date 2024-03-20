@@ -126,7 +126,7 @@ main{
     justify-content: center;
     align-items: center;
     grid-template-columns: 3% 94% 3%;
-    grid-template-rows: 10px 150px 600px 150px 600px 150px 800px 150px 500px 150px 200px;
+    grid-template-rows: 600px 150px 600px 150px 600px 150px 800px 150px 500px 150px 200px;
     padding-top: 8%;
 }
 
@@ -203,7 +203,7 @@ main a:hover{
     grid-row-end: 1;
     height: 100%;
     width: 100%;
-    margin-left: 400px;
+    overflow: hidden;
 }
 .slides{
     width: 500%;
